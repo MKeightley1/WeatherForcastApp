@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Cities;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('cities', 'CitiesController@index');
+Route::get('cities/{id}', 'CitiesController@show');
+
+Route::get('weather', 'CitiesController@index');
+Route::get('weather/{id}', 'CitiesController@show');

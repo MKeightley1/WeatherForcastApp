@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Cities;
+use App\Weather;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('cities', 'CitiesController@index');
+Route::get('cities/{id}', 'CitiesController@show');
+
+Route::get('weather', 'WeatherController@index');
+Route::get('weather/{id}', 'WeatherController@show');
