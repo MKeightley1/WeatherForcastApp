@@ -24,12 +24,12 @@ Example: copy .env.example file in source code and update DB settings
 1. <b>php artisan serve </b>  - This will start a local server and allow access to api
 2. use API to hit endoints (other API managemen tool) - Example: http://127.0.0.1:8000/api/weatherUpdateData
 
-Endpoints
-<b>/api/cities</b> - retrieve all cities
-<b>/api/cities/{id}</b> - search city record by id
-<b>/api/weather</b> - retrieve all weather records
-<b>/api/weather/{id}</b> - update weather records
-<b>/api/weatherUpdateData</b> - //update DB data with weather forcast information from external API
+**Endpoints
+<br><b>/api/cities</b> - retrieve all cities
+<br><b>/api/cities/{id}</b> - search city record by id
+<br><b>/api/weather</b> - retrieve all weather records
+<br><b>/api/weather/{id}</b> - update weather records
+<br><b>/api/weatherUpdateData</b> - //update DB data with weather forcast information from external API
 
 ## Assumptions made
 1. This is an Australian based city application - limited results to Australian based cities (200+ recorded in json file)
