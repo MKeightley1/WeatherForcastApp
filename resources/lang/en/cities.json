@@ -11,17 +11,6 @@
         "population": "4630000"
     }, 
     {
-        "city": "South Melbourne", 
-        "admin": "Victoria", 
-        "country": "Australia", 
-        "population_proper": "93625", 
-        "iso2": "AU", 
-        "capital": "", 
-        "lat": "-37.833333", 
-        "lng": "144.966667", 
-        "population": "4170000"
-    }, 
-    {
         "city": "Brisbane", 
         "admin": "Queensland", 
         "country": "Australia", 

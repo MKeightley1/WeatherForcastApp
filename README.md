@@ -77,3 +77,74 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Instructions of Installation
+
+1. Download the repository for github to your local machine (https://github.com/MKeightley1/WeatherForcastApp/tree/weatherForcast)
+2. Ensure you have composer installed and php environment
+3. Create a database in phpmyAdmin and record this for step 4.
+4. Open the source code and modify DB settings to reflect application (Mainly database name for local development)
+Example: copy .env.example file in source code and update DB settings
+3. Navigate in command line to the source code and run the following commands
+
+** Composer install
+This command will create a vendor directory in your source code with necessary libraries.
+** php artisan migrate
+Install all tables in database
+** php artisan db:seed --class=CitiesTableSeeder
+This will fill collection of Cities data from json file.
+
+## Execution of application
+** php artisan serve 
+This will start a local server and allow access to api
+** CALL via Postman or other API managemen tool
+Example: http://127.0.0.1:8000/api/weatherUpdateData
+
+//retrieve all cities
+Route::get('cities', 'CitiesController@index');
+//search city record by id
+Route::get('cities/{id}', 'CitiesController@show');
+//retrieve all weather records
+Route::get('weather', 'WeatherController@index');
+//update weather records
+Route::get('weather/update', 'WeatherController@show');
+//search weather record by id
+Route::get('weather/{id}', 'WeatherController@show');
+//update DB data with weather forcast information from external API
+Route::get('weatherUpdateData', 'WeatherController@updateRecords');
+
+## Assumptions made
+** This is an Australian based city application - limited results to Australian based cities (200+ recorded in json file)
+** The external API for weather forcasts is accurate and reliable
+
+## Decisions made
+** As async calls cannot me be locally - I temparily use "fileGetContent PHP" command to get results
+** Decided to focus the backend of the application as thats my strong of skill in the task.
+** Details recorded for weather data needed to be minimal but also useable to the machinary environments
+** Keeping in mind flexability in design and potential daily reporting, decided to store all weather information into the database
+** seperated out weather data retrieval from installation is this will need to be used for updates daily.
+
+## Progress
+** Communicated application to external API
+** Store cities and relevent weather data in db
+** API endpoint to return all entries
+
+## Whats left
+** React front-end UI
+** Adding console command to generate reports
+** filtering results based on selected city
+** Consider more effective error handling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
