@@ -16,27 +16,20 @@
 Example: copy .env.example file in source code and update DB settings
 5. Navigate in command line to the source code and run the following commands
 
-6. Composer install - This command will create a vendor directory in your source code with necessary libraries.
-7. php artisan migrate - Install all tables in database
-8. php artisan db:seed --class=CitiesTableSeeder - This will fill collection of Cities data from json file.
+6. <b>composer install</b> - This command will create a vendor directory in your source code with necessary libraries.
+7. <b>php artisan migrate</b> - Install all tables in database
+8. <b>php artisan db:seed --class=CitiesTableSeeder</b> - This will fill collection of Cities data from json file.
 
 ## Execution of application
-1. php artisan serve  - This will start a local server and allow access to api
+1. <b>php artisan serve </b>  - This will start a local server and allow access to api
 2. use API to hit endoints (other API managemen tool) - Example: http://127.0.0.1:8000/api/weatherUpdateData
 
 Endpoints
-//retrieve all cities
-Route::get('cities', 'CitiesController@index');
-//search city record by id
-Route::get('cities/{id}', 'CitiesController@show');
-//retrieve all weather records
-Route::get('weather', 'WeatherController@index');
-//update weather records
-Route::get('weather/update', 'WeatherController@show');
-//search weather record by id
-Route::get('weather/{id}', 'WeatherController@show');
-//update DB data with weather forcast information from external API
-Route::get('weatherUpdateData', 'WeatherController@updateRecords');
+<b>/api/cities</b> - retrieve all cities
+<b>/api/cities/{id}</b> - search city record by id
+<b>/api/weather</b> - retrieve all weather records
+<b>/api/weather/{id}</b> - update weather records
+<b>/api/weatherUpdateData</b> - //update DB data with weather forcast information from external API
 
 ## Assumptions made
 1. This is an Australian based city application - limited results to Australian based cities (200+ recorded in json file)
