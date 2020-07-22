@@ -10,11 +10,11 @@
 ## Instructions of Installation
 
 1. Download the repository for github to your local machine (https://github.com/MKeightley1/WeatherForcastApp/tree/weatherForcast)
-2. Ensure you have composer installed and php environment
+2. Ensure you have composer installed and php environment.
 3. Create a database in phpmyAdmin and record this for step 4.
-4. Open the source code and modify DB settings to reflect application (Mainly database name for local development)
-Example: copy .env.example file in source code and update DB settings
-5. Navigate in command line to the source code and run the following commands
+4. Open the source code and modify DB settings to reflect application (Mainly database name for local development).
+Example: copy .env.example file in source code and update DB settings.
+5. Navigate in command line to the source code and run the following commands.
 
 6. <b>composer install</b> - This command will create a vendor directory in your source code with necessary libraries.
 7. <b>php artisan migrate</b> - Install all tables in database
@@ -29,29 +29,29 @@ Example: copy .env.example file in source code and update DB settings
 <br><b>/api/cities/{id}</b> - search city record by id
 <br><b>/api/weather</b> - retrieve all weather records
 <br><b>/api/weather/{id}</b> - update weather records
-<br><b>/api/weatherUpdateData</b> - //update DB data with weather forcast information from external API
+<br><b>/api/weatherUpdateData</b> - update DB data with weather forcast information from external API
 
 ## Assumptions made
-1. This is an Australian based city application - limited results to Australian based cities (200+ recorded in json file)
-2. The external API for weather forcasts is accurate and reliable
+1. This is an Australian based city application - limited results to Australian based cities (200+ recorded in json file).
+2. The external API for weather forcasts is accurate and reliable.
 
 ## Decisions made
-3. As async calls cannot me be locally - I temparily use "fileGetContent PHP" command to get results
+3. As async calls cannot me be locally - I temparily use "fileGetContent PHP" command to get results.
 4. Decided to focus the backend of the application as thats my strong of skill in the task.
-5. Details recorded for weather data needed to be minimal but also useable to the machinary environments
-6. Keeping in mind flexability in design and potential daily reporting, decided to store all weather information into the database
-7. seperated out weather data retrieval from installation is this will need to be used for updates daily.
+5. Details recorded for weather data needed to be minimal but also useable to the machinary environments.
+6. Keeping in mind flexability in design and potential daily reporting, decided to store all weather information into the database.
+7. Seperated out weather data retrieval from installation is this will need to be used for updates daily.
 
 ## Progress
-1. Communicated application to external API
-2. Store cities and relevent weather data in db
-3. API endpoint to return all entries
+1. Communicated application to external API.
+2. Store cities and relevent weather data in db.
+3. API endpoint to return all entries.
 
 ## Whats left
 1. React front-end UI
-2. Adding console command to generate reports
-3. filtering results based on selected city
-4. Consider more effective error handling
+2. Adding console command to generate reports.
+3. filtering results based on selected city.
+4. Consider more effective error handling.
 
 
 
