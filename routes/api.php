@@ -19,8 +19,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//retrieve all cities
 Route::get('cities', 'CitiesController@index');
+//search city record by id
 Route::get('cities/{id}', 'CitiesController@show');
 
+//retrieve all weather records
 Route::get('weather', 'WeatherController@index');
+//update weather records
+Route::get('weather/update', 'WeatherController@show');
+//search weather record by id
 Route::get('weather/{id}', 'WeatherController@show');
+
+Route::get('weatherUpdateData', 'WeatherController@updateRecords');

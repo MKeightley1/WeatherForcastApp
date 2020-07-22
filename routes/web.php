@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Cities;
+use App\Weather;
+use GuzzleHttp\Client;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +18,3 @@ use App\Cities;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('cities', 'CitiesController@index');
-Route::get('cities/{id}', 'CitiesController@show');
-
-Route::get('weather', 'CitiesController@index');
-Route::get('weather/{id}', 'CitiesController@show');

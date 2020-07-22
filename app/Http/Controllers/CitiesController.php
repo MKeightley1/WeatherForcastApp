@@ -14,18 +14,4 @@ class CitiesController extends Controller{
     {
         return $id;
     }
-	/*
-	public function store(Request $request)
-    {
-		$this->validate($request, [
-			'name' => 'required',
-			'longitude' => 'required|integer',
-			'latitude' => 'required|integer',
-		]);
-		
-        $city = Cities::create($request->all());
- 
-        return response()->json($city, 201);
-    }
-	*/
 }

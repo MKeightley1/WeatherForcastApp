@@ -12,15 +12,16 @@ class CitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = \Faker\Factory::create();
- 
-        // Create 5 city records
-        for ($i = 0; $i < 5; $i++) {
-            Cities::create([
-                'name' => $faker->name,
-                'latitude' => $faker->randomNumber(2),
-				'longitude' => $faker->randomNumber(2),
-            ]);
-        }
+		$jsonString = file_get_contents(base_path('resources/lang/en/cities.json'));
+		$citiesData = json_decode($jsonString, true);
+	
+		//loop through each city
+		foreach( $citiesData As $city ){	
+			Cities::create([
+				'name' => $city['city'],
+				'latitude' => $city['lat'],
+				'longitude' => $city['lng'],
+			]);
+		}
     }
 }
